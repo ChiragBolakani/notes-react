@@ -9,5 +9,5 @@ export default defineConfig({
     port : 3000,
     host : true
   },
-  base : "/"
+  base : "/notes-react/"
 })
