@@ -12,7 +12,7 @@ const NotesListPage = () => {
     }, [])
 
     let getNotes = async ()=>{
-        let response = await fetch('http://localhost:8000/notes/')
+        let response = await fetch('http://13.233.157.119:8004/notes/')
         let data = await response.json() 
         setNotes(data)
     }

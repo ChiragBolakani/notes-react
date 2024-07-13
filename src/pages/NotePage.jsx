@@ -15,13 +15,13 @@ const NotePage = ({ history }) => {
     }, [])
 
     let getNote = async ()=>{
-        let response = await fetch(`http://localhost:8000/notes/${noteId}`)
+        let response = await fetch(`http://13.233.157.119:8004/notes/${noteId}`)
         let data = await response.json()
         setNote(data)
     }
 
     let createNote = async ()=>{
-        await fetch(`http://localhost:8000/notes/`, {
+        await fetch(`http://13.233.157.119:8004/notes/`, {
             method : 'POST',
             headers : {
                 'Content-Type' : 'application/json'
@@ -31,7 +31,7 @@ const NotePage = ({ history }) => {
     }
 
     let updateNote = async ()=>{
-        await fetch(`http://localhost:8000/notes/${noteId}`, {
+        await fetch(`http://13.233.157.119:8004/notes/${noteId}`, {
             method : 'PUT',
             headers : {
                 'Content-Type' : 'application/json'
@@ -41,7 +41,7 @@ const NotePage = ({ history }) => {
     }
 
     let deleteNote = async ()=>{
-        await fetch(`http://localhost:8000/notes/${noteId}`, {
+        await fetch(`http://13.233.157.119:8004/notes/${noteId}`, {
             method : 'DELETE',
             headers : {
                 'Content-Type' : 'application/json'
